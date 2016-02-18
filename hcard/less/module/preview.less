@@ -1,0 +1,45 @@
+#preview-wrapper{
+	min-width: 280px;
+	max-width: 430px;
+	height: auto;
+	margin:15% auto;
+	.preview-wrapper-header{
+		.font-size(2);
+		float: right;
+		margin-bottom:10px;
+		@media (max-width: @screen-md-min) {
+ 			float:left;
+		}	
+	}	
+	#preview-box{
+		.preview-header{
+			height: 70px;
+			background-color: @header-text-bg-color;
+			color: #fff;
+			padding: @preview-padding;
+			h1{
+				margin:0;
+				line-height: 70px;
+			}
+		}
+		.preview-body{
+			padding: @preview-padding;
+			padding-top:27px;
+			padding-bottom:27px;
+			background-color: #fff;
+			border-bottom: @preview-box-border;
+			.preview-row{
+				border-bottom: @preview-box-border-thin;
+				margin-bottom: 15px;
+
+				.item-name{
+					display:inline-block;
+					color: rgb(44,62,80);
+					.font-size(0.9);
+					width: 80px;
+				}
+			}
+		}
+	}
+}
+

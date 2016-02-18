@@ -1,0 +1,19 @@
+{
+  "name": "hcard",
+  "version": "1.0.0",
+  "description": "Customer detail form fill and preview",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "luyi",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.36",
+    "karma-jasmine": "^0.3.5"
+  }
+}

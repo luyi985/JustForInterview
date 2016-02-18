@@ -1,0 +1,25 @@
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+.preview-bg{
+	background-color: rgb(225,228,231);
+}
+
+.inline{
+	display:inline-block;
+}
+
+.half{
+	width: 50%;
+}
+
+
+input[type=text],
+.preview-content{
+	.font-size(1.5);
+	font-weight:bold;
+}
