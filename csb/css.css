@@ -1,0 +1,121 @@
+ul,
+ol{
+	list-style: none;
+}
+
+.row{
+	padding-right: 40px;
+}
+
+
+.transition{
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+.page{
+	width: 100%;
+	padding-left:30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: fixed;
+	top: 20px;
+	opacity: 0.3;
+	background-color: #000;
+	z-index: 1;
+	
+}
+.page:hover,
+.page:active{
+	opacity: 0.7;
+}
+
+
+
+.page .page-btn,
+.page .page-status{
+	line-height: 25px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	height: 25px;
+	cursor: pointer;
+}
+.page .page-btn:active,
+.page .page-btn:hover,
+.page .page-btn:visited{
+	border: none;
+	outline: none;
+}
+
+.mail-to-link{
+	color: #333;
+}
+
+
+.name-card-list{
+	margin-top: 105px;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.name-card{
+	position: relative;
+	background-color: #fefefe;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.55);
+	overflow: hidden;
+}
+.name-card:hover,
+.name-card:active{
+	-webkit-box-shadow: -9px 10px 5px 0px rgba(0,0,0,0.55);
+	-moz-box-shadow: -9px 10px 5px 0px rgba(0,0,0,0.55);
+	box-shadow: -9px 10px 5px 0px rgba(0,0,0,0.55);
+}
+	
+
+.name-card-logo{
+	float: right;
+	margin: 0 20px 20px 0;
+	max-width: 160px;
+	width: 30%;
+}
+
+@media all and (max-width: 530px){
+	.name-card-logo{
+		float: none;
+    	margin: 0 20px 20px 0;
+    	max-width: 200px;
+    	width: 100%;
+    	display: block;
+	}
+}
+
+.name-card-logo img{
+	width: 100%;
+}
+
+.name-card-status{
+	position: absolute;
+	right: 0;
+	top: 20px;
+	text-indent: -99999px;
+	display: block;
+	height: 0;
+	width: 0;
+	border-top:0px solid transparent;
+	border-left:30px solid transparent;
+	border-right:30px solid transparent;
+	border-bottom: 30px solid #ddd;
+	-webkit-transform: rotate(235deg);
+    -moz-transform: rotate(235deg);
+    -o-transform: rotate(235deg);
+    -ms-transform: rotate(235deg);
+    -sand-transform: rotate(235eg);
+}

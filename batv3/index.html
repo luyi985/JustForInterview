@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>BatShot</title>
+	<meta name="viewport" content="width=device-width,
+	user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=false">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<div id="sound">
+			<audio id="gunshot">
+					<source src="sound/gun.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="ghostcry">
+					<source src="sound/ghost.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="batDying">
+					<source src="sound/bat.mp3" type="audio/mpeg">
+			</audio>
+	</div>
+	<!-- ----------------------Preloading----------------------- -->
+	<div class="container" id="preloading"
+		style="background-image:url(img/loader.gif);background-position:50% 50%;background-repeat:no-repeat;"
+	></div>
+	<!-- ----------------------Start Page----------------------- -->
+	<div class="container" id="gamestart">
+		<div class="inner">
+			<div class="header">
+				<h1>Bat Smash</h1>
+			</div>
+			<div class="main">
+				<h2>How many bats can you smash?</h2>
+				<p>Use your mouse or finger to smash as many bats as possible.</p>
+				<p>You have 10 secondes! Be careful,</p>
+				<p>don't touch the ghost or you will lose a point!</p>
+			</div>
+			<div class="buttonArea">
+				<h3>You have only <span id="totalAttempts"></span> attempts!</h3>
+				<button id="startGameStart">Click Here To Start</button>
+			</div>
+		</div>
+	</div>
+	<!-- ----------------------Game Page------------------------ -->
+	<canvas id="game"></canvas>
+	<!-- ----------------------Result Page---------------------- -->
+	<div class="container transition" id="result">
+		<div class="inner">
+			<div class="header">
+				<h1>Bat Smash</h1>
+			</div>
+			<div class="main">
+				<h2>Your best score is <span class="bestScore"></span></h2>
+				<h3>You have <span id="attemptsRemaining"></span> attempts remaining</h3>
+			</div>
+			<div class="buttonArea">
+				<button id="startGameResult">Click Here To Start</button>
+			</div>
+		</div>
+	</div>
+	<!-- ----------------------ThankYou Page-------------------- -->
+	<div class="container transition" id="thankyou">
+		<div class="inner">
+			<div class="header">
+				<h1>Bat Smash</h1>
+			</div>
+			<div class="main">
+				<h2>Thanks you for playing</h2>
+				<h2>Your best score is <span class="bestScore"></span></h2>
+			</div>
+			<div class="buttonArea">
+				<button id="backThankYou">Click Here To Back</button>
+			</div>
+		</div>
+	</div>
+	<!-- ------------------------------------------------------- -->
+	<script src="js/gameControll.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/preload.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/resize.js"></script>
+	<script src="js/draw.js"></script>
+	<script src="js/countDown.js"></script>
+	<script src="js/input.js"></script>
+	<script src="js/move.js"></script>
+	<script src="js/sound.js"></script>
+	<script src="js/role/score.js"></script>
+	<script src="js/role/explode.js"></script>
+	<script src="js/role/ghost.js"></script>
+	<script src="js/role/bat.js"></script>
+	<script src="js/role/hit.js"></script>
+	<script src="js/loop.js"></script>
+	<script src="js/run.js"></script>
+</body>
+</html>

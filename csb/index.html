@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="csb">
+	<head>
+		<title>CSB TEST</title>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="css.css">
+	</head>
+	<body>
+		<div ng-controller="ctrLoadContent" class="container-fluid">
+			<div class="text-center page row transition">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div ng-click="pagination.prePage()" class="pull-left page-btn">
+						<span class="glyphicon glyphicon-menu-left"><span><span>Pre</span>
+					</div>
+					<span class="page-status" ng-cloak>{{pagination.currentPage}}<span><span class="page-status">/</span><span class="page-status" ng-cloak>{{pagination.totalPage}}</span>
+					<div ng-click="pagination.nextPage()" class="pull-right page-btn">
+						<span>Next</span><span class="glyphicon glyphicon-menu-right"></span>
+					</div>
+				</div>
+			</div>
+			<ul class="row name-card-list">
+				<li ng-repeat="item in pagination.currentItems" class="name-card col-xs-12 col-sm-12 col-md-12 panel transition">
+					<div ng-cloak class="name-card-status ">{{item.status}}</div>
+					<h3 ng-cloak>{{item.display_name}}</h3>
+					<div class="js-accordion is-open">
+						<a href="{{item.web_url}}" class="name-card-logo"><img ng-src="{{item.logo.path_to_file}}" alt="{{item.display_name}}"></a>
+						<p><b>Email:</b> <a class="mail-to-link" ng-href="mailto:{{item.email}}">{{item.email}}</a></p>
+						<p><b>Phone:</b> {{item.phone}}</p>
+						<address>
+							<b>Address:</b><br/>
+							<strong>
+								{{item.address.address1}}<br>
+								{{item.address.address2}}<br ng-show="item.address.address2">
+								{{item.address.suburb}},
+								{{item.address.state|filterState}},
+								{{item.address.postcode}},
+								{{item.address.country|filterCountry}}<br>
+							</strong>
+						</address>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="js.js"></script>
+	</body>
+</html>
